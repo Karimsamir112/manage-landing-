@@ -1,0 +1,1003 @@
+$maincolor: hsl(12, 88%, 59%);
+$darkblue: hsl(228, 39%, 23%);
+$mainsize: 16px;
+$transition: all 0.5s ease-in-out;
+
+p{
+	
+	color: hsl(227, 12%, 61%);
+	margin-top: 20px;
+}
+
+@mixin buttons() {
+		cursor:pointer;
+		background-color: $maincolor;
+		color:white;
+		text-align: center;
+		width: 160px;
+		height: 45px;
+		border-radius: 30px;
+		border:1px solid $maincolor;
+		box-shadow: 5px 5px 10px hsl(12, 88%, 59%);
+		transition: $transition
+	}
+@mixin buttonsHover() {
+	
+	background-color: white;
+		color:$maincolor;
+		border:1px solid $maincolor;
+}
+
+body{
+
+overflow-x: hidden;
+	font-family: [Be Vietnam];
+	font-weight: 400, 500, 700;
+	font-size: $mainsize;
+}
+
+/* the first */
+
+header{
+	
+	
+	display: flex;
+	justify-content: space-around;
+	
+	margin-top: 50px;
+	
+	img{
+		height: 20px;
+		margin-top:12px
+	}
+	
+	nav{
+		
+		margin-top:10px
+		
+	}
+	
+		
+		nav li{
+			
+			list-style-type: none;
+			float: left;
+			display: inline-block
+		}
+		
+		nav li a{
+			color:inherit;
+			margin-left: 40px;
+			text-decoration: none;
+			transition: $transition
+			
+			/* &::hover{
+				
+				color:black;
+				text-decoration: none;
+			}  */
+		}
+	nav li a:hover{
+		
+		color:hsl(227, 12%, 61%);
+				text-decoration: none;
+	}
+	
+	
+	
+	button{
+		
+	@include buttons;
+			
+	}
+	
+	button:hover{
+		
+		background-color: white;
+		color:$maincolor;
+		border:1px solid $maincolor;
+		
+	}  
+	
+	.burger{
+		display: none;
+	}
+	
+	 .inside-burger , .inside-burger2{
+		
+	visibility: hidden;
+		 display: none;
+		 position: absolute;
+		
+	}   
+
+	
+}
+
+.bg-section{
+	transform: rotate(0deg);
+	position: absolute;
+	top:-125px;
+	right:0;
+	width: 50%;
+	height: 780px;
+	z-index: -1;
+}
+
+
+/* the second */
+
+
+
+
+.bring{
+	margin-top: 150px;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	
+	
+	
+	article h1{
+		
+		font-size: $mainsize * 3.5;
+		color:hsl(228, 39%, 23%);
+		
+	}
+	
+	button{
+		@include buttons;
+		margin-top: 20px
+	}
+	
+	button:hover{
+@include buttonsHover;
+		
+	}
+
+}
+
+/* the third */
+
+
+.different{
+	margin-top: 100px;
+	display: flex;
+	justify-content: space-around;
+	
+	
+	
+	article:first-of-type {
+		
+			 margin-left: 7%;
+			width: 40%;
+		
+		h2{
+			font-size: $mainsize * 2.5;
+		color: hsl(228, 39%, 23%);
+		}
+		
+		img{
+			position: absolute;
+			width: 700px;
+			height: 700px;
+			transform: rotate(175deg);
+			z-index: -1;
+			margin-left: -500px;
+			margin-top: 100px
+		}
+	}
+	
+	
+	
+	article:last-of-type {
+		
+		 margin-right: 0%;
+		width: 50%;
+		 
+		div {
+			
+		
+		margin-top: 30px;
+		
+		
+		div:first-of-type{
+			
+			color:white;
+			background-color: $maincolor;
+			border-radius: 20px;
+			width: 70px;
+			height: 35px;
+			padding-top: 7px;
+			text-align: center;
+			display: inline-block
+		}
+		
+		div:nth-of-type(2){
+			
+			color:black;
+			display: inline-block;
+			margin-left: 20px
+		}
+	
+	}
+}
+	
+}
+
+
+/* the fourth */
+
+
+
+
+.people{
+	text-align: center;
+		
+		h3{
+	        margin-top: 150px;
+	   text-align: center;
+			font-size: $mainsize * 2.5;
+		color: hsl(228, 39%, 23%);
+		}
+		
+		
+		 div:first-of-type{
+	margin-top: 80px;
+	display: flex;
+	justify-content: center;
+	column-gap: 30px;
+			 
+			 article{
+				 
+				 
+				 img{
+			width: 80px;
+			height: 80px
+		}
+				 
+				 h4{
+			color: hsl(228, 39%, 23%);
+			margin-top: 40px;
+		}
+		p{
+			margin-top: 40px
+		}
+				 
+				 
+			 }
+			 
+			 
+			  }
+			 
+			 
+	          
+	      
+	
+	
+	 .buttons{
+				 display: none;
+				
+			 }
+		
+		.grandbutton{
+
+	@include buttons;
+	margin-top: 100px
+		
+	}
+	.grandbutton:hover{
+@include buttonsHover;
+	}
+
+}
+
+
+/* the fifth */
+.simplify{
+	background: url("../images/bg-simplify-section-desktop.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 250px ;
+	background-color: $maincolor;
+	margin-top: 150px;
+	width: 100%;
+	height: 250px;
+	
+	padding:60px;
+	
+	display: flex;
+	justify-content: space-around;
+	column-gap: 200px;
+	
+	
+	h2{
+			font-size: $mainsize * 2.5;
+		color: white;
+		width: 40%
+		}
+	
+	button{
+		cursor: pointer;
+		background-color: white;
+		color:$maincolor;
+		text-align: center;
+		width: 160px;
+		height: 45px;
+		border-radius: 20px;
+		border:1px solid $maincolor;
+		box-shadow: 5px 5px 10px hsl(12, 88%, 59%);
+		transition: $transition;
+		margin-top: 40px
+	}
+	
+	button:hover{
+opacity: 0.6
+	}
+	
+}
+
+
+/* final */
+
+footer{
+	display: flex;
+	justify-content: space-around;
+	
+	width: 100%;
+	padding:80px;
+	height: 350px;
+	background-color: hsl(233, 12%, 13%);
+	
+	
+	
+	
+	div:first-of-type div{
+		
+		cursor: pointer;
+		margin-top: 160px;
+		
+		i{
+margin-left: 10px;
+			transition: $transition;
+			color:white;
+			font-size: 22px;
+			
+		}
+		
+		i:hover{
+			color:$maincolor;
+		}
+	}
+	
+	
+	nav li {
+		list-style-type: none;
+		margin-top: 20px;
+		
+		a{
+         
+		color:hsl(227, 12%, 61%);
+			text-decoration: none;
+			
+			transition: $transition;
+			
+		}
+		a:hover{
+
+		color:$maincolor;
+			text-decoration: none;
+		}
+		
+	}
+	
+	div:nth-of-type(3){
+		margin-left: 160px
+	}
+	
+	    
+
+	#inp{
+
+	width: 250px;
+		height: 50px;
+		border-radius: 30px;
+		padding-left: 30px;
+		border:1px solid hsl(233, 12%, 13%);
+		//display: inline-block;
+	}
+	
+.check{
+		/* display: none; */
+       color:$maincolor;
+		position: absolute;
+		margin-top: 60px;                                                            
+		margin-left: -370px;
+	}
+	
+
+	
+	 
+	
+	button{
+		@include buttons;
+		width: 100px;
+		height: 50px;
+		box-shadow: 0px 0px 0px hsl(233, 12%, 13%);
+		margin-left: 5px;
+		
+	}
+	button:hover{
+		@include buttonsHover;
+	}
+	
+	h6{
+
+	margin-top: 140px;
+		margin-left: 50px;
+		color: hsl(227, 12%, 61%);
+	}
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+/* for mobile */
+
+@media (max-width:1000px){
+
+	
+	
+	/* the first */
+	
+	header{
+		
+		display: inline-block;
+		width: 95%;
+		padding: 20px;
+		margin-top: 20px;
+		
+		nav{
+			
+			display: none;
+		}
+		
+		button{
+
+		display: none;
+		}
+		
+		.burger{
+			display: block;
+			float: right;
+			cursor: pointer;
+			animation: burg 0.3s ease-in-out 0s 1 forwards
+		}
+		
+	
+	
+	.inside-burger{
+		
+		display: none;
+		visibility: visible;
+		position: absolute;
+		top:0;
+		left:0;
+		padding-top: 50px;
+		background-color: hsl(0, 0%, 98%);
+		width: 100%;
+		height: 500px;
+		z-index: 1000;
+		animation: showinsideburg 0.2s ease-in-out 0s 1 forwards;
+		
+		div:first-of-type{
+			width: 96%;
+		}
+		
+		img:first-of-type{
+			float: left;
+			margin-left: 26px;
+			margin-top: 6px
+		}
+		
+		img:last-of-type{
+			cursor: pointer;
+			float: right;
+			margin-right: 5%;
+			margin-top: 6px
+			
+		}
+		
+		div:last-of-type  {
+			
+			margin-top: 60px;
+			text-align: center;
+			
+			
+			li {
+				list-style-type: none;
+				margin-top: 60px;
+				display: block;
+				
+				a{
+					color:inherit;
+			text-decoration: none;
+			transition: $transition
+				}
+				a:hover{
+					color:hsl(227, 12%, 61%);
+				text-decoration: none;
+				}
+				}
+				
+              
+		}
+	} 
+	
+	/* to close */
+.inside-burger2{
+		
+		display: none;
+	visibility: visible;
+		position: absolute;
+		top:0;
+		left:0;
+		padding-top: 50px;
+		background-color: hsl(0, 0%, 98%);
+		width: 100%;
+		height: 450px;
+		z-index: 1000;
+		animation: hideinsideburg 0.2s ease-in-out 0s 1 forwards;
+		
+		div:first-of-type{
+			width: 96%;
+		}
+		
+		img:first-of-type{
+			float: left;
+			margin-left: 26px;
+		}
+		
+		img:last-of-type{
+			cursor: pointer;
+			float: right;
+			
+		}
+		
+		div:last-of-type  {
+			
+			margin-top: 60px;
+			text-align: center;
+			
+			
+			li {
+				list-style-type: none;
+				margin-top: 60px;
+				display: block;
+				
+				a{
+					color:inherit;
+			text-decoration: none;
+			transition: $transition
+				}
+				a:hover{
+					color:hsl(227, 12%, 61%);
+				text-decoration: none;
+				}
+				}
+				
+              
+		}
+	}
+	
+		
+		
+		}
+	@keyframes showinsideburg{
+	
+	
+	from{
+
+	margin-left: 100%;
+	}
+	
+	to{
+margin-left: 0%;
+	}
+	
+}
+	
+	@keyframes hideinsideburg{
+	
+	
+	from{
+
+	margin-left: 0%;
+	}
+	
+	to{
+margin-left: 100%;
+	}
+	
+}
+	
+
+	
+
+@keyframes burg{
+	
+	
+	from{
+
+	transform: scale(1.8);
+	}
+	
+	to{
+transform: scale(1);
+	}
+	
+}
+
+
+
+.bg-section{
+	transform: rotate(0deg);
+	position: absolute;
+	top:-125px;
+	right:0;
+	width: 450px;
+	height: 100%;
+	z-index: -1;
+}
+
+
+/* the second */
+
+
+.bring{
+	margin-top: 150px;
+	display: block;
+	text-align: center;
+	
+	img {
+		width: 100%
+	}
+}
+	
+	
+	/* the third */
+	
+	
+	.different{
+	margin-top: 150px;
+	display: block;
+	text-align: center;
+	
+	
+	
+	article:first-of-type {
+		 margin-left: 0%;
+			width: 100%;
+			
+		/* */
+		img{
+			transform: rotate(40deg);
+	position: absolute;
+	top:500px;
+	right:-370px;
+	width: 450px;
+	height: 100%;
+	z-index: -1;
+		}
+		
+	}
+	
+	
+	
+	article:last-of-type {
+		
+		 margin-right: 0%;
+		width: 100%;
+		 
+		div {
+			
+		
+		margin-top: 30px;
+		
+		
+		div:first-of-type{
+			
+			color:white;
+			background-color: $maincolor;
+			border-radius: 20px;
+			width: 70px;
+			height: 35px;
+			padding-top: 7px;
+			text-align: center;
+			display: inline-block;
+			position: relative;
+			left:50px;
+			top:3px;
+			
+		}
+		
+		div:nth-of-type(2){
+			
+			color:black;
+			display: inline-block;
+			margin-left: 20px;
+			background-color: hsl(13, 100%, 96%);
+			border-radius: 20px;
+			height: 35px;
+			width: 70%;
+			text-align: left;
+			padding-left: 40px;
+			padding-top: 5px;
+		
+		}
+	
+	}
+}
+	
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/* the fourth */
+	
+	
+.people{
+	
+		
+		h3{
+	        margin-top: 150px;
+	   text-align: center;
+			font-size: $mainsize * 2.5;
+		color: hsl(228, 39%, 23%);
+		}
+		
+		
+		 div:first-of-type{
+	margin-top: 80px;
+	display: flex;
+	justify-content: center;
+	column-gap: 30px;
+			 
+		 article{
+				 animation :showpeople 0.3s ease-in-out 0s 1 forwards  ;
+			 } 
+			
+				 
+			 article:first-of-type , article:nth-of-type(3) ,  article:last-of-type{
+				 
+				  display: none;  
+				 
+				
+				
+				
+				/* left: 100%;
+				 position: absolute;
+				  animation :showpeople 0.3s ease-in-out 0s 1 forwards paused;
+					  animation :showpeople 0.3s ease-in-out 0s 1 forwards paused;  */
+			 }
+			
+			
+			 
+			 
+			 }
+			 
+	          
+	       
+	
+	
+	
+	     .buttons{
+				 display: block;
+			 margin-top: 50px;
+			 
+			 button{
+				 border-radius: 50%;
+				 height: 14px;
+				 width: 10px;
+				 border:1px solid $maincolor;
+				 background-color: white;
+			 }
+			
+			 .button2{
+				  background-color: $maincolor;
+			 }
+				
+			 }
+	
+	
+	}
+	
+	 @keyframes showpeople {
+		
+		
+		from{
+			margin-left:100%
+			
+			/* left: 100%;
+				 position: absolute; */
+		}
+		to{
+			
+			/* left: 0%;
+				 position: relative; */
+			margin-left: 0%;
+				
+		}
+		
+	}
+	
+	
+	@keyframes showpeoplee {
+		
+		
+		from{
+			position: absolute;
+				 left: 100%;
+			
+		/*	left: 100%;
+				 position: absolute; */
+		}
+		to{
+			
+			/* left: 0%;
+				 position: relative; */
+			position: absolute;
+				 left: 0%;
+				
+		}
+		
+	}
+	
+	
+	
+	/* the fifth */
+	
+	
+	
+	
+	.simplify{
+	background-position: left;
+	margin-top: 100px;
+	width: 100%;
+	height: 350px;
+	
+	padding:0px;
+		padding-top: 90px;
+	
+	display: block;
+	text-align: center;
+		
+		h2{
+			font-size: $mainsize * 2.5;
+		color: white;
+		width: 100%
+		}
+		
+		
+		button{
+	
+		margin-top: 20px
+	}
+	}
+	
+	
+	
+	/* final */
+	
+	
+footer{
+	text-align: center;
+	display: block;
+	width: 100%;
+	height: 550px;
+	padding:0px;
+	padding-top: 50px;
+	
+	img{
+     position: relative;
+		top:400px;
+	}
+	
+	div:first-of-type div{
+		
+		cursor: pointer;
+		margin-top: 40px;
+		
+		i{
+			
+margin-left: 30px;
+			position: relative;
+			top:480px;
+			
+		}
+	
+	}
+	
+	
+/*	nav li {
+		
+		margin-top: 20px;
+		
+		a{
+         
+		color:hsl(227, 12%, 61%);
+			text-decoration: none;
+			
+			transition: $transition;
+			
+		}
+		a:hover{
+
+		color:$maincolor;
+			text-decoration: none;
+		} 
+	} */
+	div:nth-of-type(2){
+     display: inline-block;
+		
+		
+	}
+	
+	div:nth-of-type(3){
+		
+		display: inline-block;
+		margin-left: 130px;
+		position: relative;
+		top:-30px;
+	}
+	
+	div:last-of-type{
+		position: relative;
+		top:-230px
+	}
+	
+	    
+
+	
+	
+
+.check{
+		/* display: none; */
+       color:$maincolor;
+		position: absolute;
+		margin-top: 60px;                                                            
+		margin-left: -370px;
+	}
+	
+	
+	h6{
+position: relative;
+	top: 300px;
+		margin-left: 0px;
+		color: hsl(227, 12%, 61%);
+	}
+	
+}
+	
+	
+
+}
+
+
+
+
+
+
