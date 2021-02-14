@@ -91,7 +91,7 @@ function showperson4() {
 
 
 
-
+/*
 function allpeople() {
 	/*if(document.querySelector(".button1").style.display==="none"){
 		
@@ -102,7 +102,7 @@ function allpeople() {
 	} */
 	//document.body.style.backgroundColor="red";
 	
-	if(document.body.style.backgroundColor=="white"){
+	/* if(document.body.style.backgroundColor=="white"){
 		document.body.style.backgroundColor="red";
 			document.querySelector(".person1").style.display="block";
 	document.querySelector(".person2").style.display="block";
@@ -114,7 +114,7 @@ function allpeople() {
 }
 
 
-setInterval(allpeople , 0);
+setInterval(allpeople , 0);  */
 
 
 
